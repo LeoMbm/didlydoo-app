@@ -11,10 +11,57 @@
     <header>
       <nav>
         <a href="#">
-          <img src="./src/img/logo.png" />
+          <img src="./src/img/logo.png" id="logo" />
         </a>
-        <button type="button" id="btn-create">Create Event</button>
+        <button type="button" id="btn-create">
+          Create Event<i class="fa-solid fa-plus"></i>
+        </button>
       </nav>
     </header>
+
+    <main>
+      <div class="modal">
+        <button id="modal-close" type="button" class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modalcontainer">
+          <div class="modal-item"></div>
+        </div>
+      </div>
+      <!--  POPUP_MODAL -->
+      <div class="container">
+        <div class="event-case">
+          <h2 id="event-name">Events</h2>
+          <div class="item-container">
+            <div class="event-item">
+              <p>Birthday</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="meeting-case">
+          <h2 id="meeting-name">Meetings</h2>
+          <div class="item-container">
+            <div class="meeting-item">
+              <p>Birthday</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-case">
+          <h2 id="booking-name">Bookings</h2>
+          <div class="item-container">
+            <div class="booking-item">
+              <p>Birthday</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/97bceb2613.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>
