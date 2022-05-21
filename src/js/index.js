@@ -1,8 +1,11 @@
 // IMPORT
 import openModalCreate from "./openModalCreate.js";
+import closeModal from "./closeModal.js";
 
-// VARIABLES
-let button = document.querySelector("#btn-create");
+// QUERY SELECTOR
+let btnCreate = document.querySelector("#btn-create");
+let btnClose = document.querySelector("#modal-close");
 
 // LISTENERS
-button.addEventListener("click", openModalCreate);
+btnCreate.addEventListener("click", openModalCreate);
+btnClose.addEventListener("click", closeModal);

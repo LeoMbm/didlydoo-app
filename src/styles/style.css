@@ -81,8 +81,48 @@ main {
   padding: 0.2em;
   cursor: pointer;
 }
-.fa-xmark {
+.modal-container {
+  height: 70%;
+  width: 60%;
+  background: #fff;
+  margin: auto;
 }
+
+.modal-left {
+  background: rgb(154, 150, 150);
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+form {
+  height: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+#event-name {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 3em;
+}
+
+#event-desc {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 10em;
+}
+
+#event-date {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 3em;
+}
+
+/* PAGE  */
 .container {
   height: 100%;
   width: 90%;

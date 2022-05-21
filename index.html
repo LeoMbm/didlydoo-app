@@ -24,14 +24,32 @@
         <button id="modal-close" type="button" class="close">
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <div class="modalcontainer">
-          <div class="modal-item"></div>
+        <div class="modal-container">
+          <div class="modal-left">
+            <form>
+              <input
+                type="text"
+                name="name"
+                id="event-name"
+                placeholder="Title of your event"
+                autocomplete="off"
+              />
+              <input
+                type="text"
+                name="desc"
+                id="event-desc"
+                placeholder="Description of your event"
+                autocomplete="off"
+              />
+              <input type="date" name="date" id="event-date" />
+            </form>
+          </div>
         </div>
       </div>
       <!--  POPUP_MODAL -->
       <div class="container">
         <div class="event-case">
-          <h2 id="event-name">Events</h2>
+          <h2 id="event-title">Events</h2>
           <div class="item-container">
             <div class="event-item">
               <p>Birthday</p>
@@ -40,7 +58,7 @@
         </div>
 
         <div class="meeting-case">
-          <h2 id="meeting-name">Meetings</h2>
+          <h2 id="meeting-title">Meetings</h2>
           <div class="item-container">
             <div class="meeting-item">
               <p>Birthday</p>
@@ -49,7 +67,7 @@
         </div>
 
         <div class="booking-case">
-          <h2 id="booking-name">Bookings</h2>
+          <h2 id="booking-title">Bookings</h2>
           <div class="item-container">
             <div class="booking-item">
               <p>Birthday</p>
