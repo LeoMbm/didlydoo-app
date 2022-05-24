@@ -1,9 +1,64 @@
-const titleEvent = document.querySelectorAll("p");
+const caseC = document.querySelector(".item-container");
 
 export default function displayEvent(data) {
   for (let i = 0; i < data.length; i++) {
-    titleEvent.forEach((title) => {
-      title.innerHTML = data[i].name;
-    });
+    const item = document.createElement("div");
+    item.setAttribute("class", "event-item");
+
+    const topItem = document.createElement("div");
+    topItem.className = "top-item";
+
+    const eventTitle = document.createElement("h3");
+    eventTitle.setAttribute("id", "event-name");
+
+    const itemDate = document.createElement("p");
+    itemDate.setAttribute("id", "item-date");
+
+    const mainItem = document.createElement("div");
+    mainItem.className = "main-item";
+
+    const leftItem = document.createElement("div");
+    leftItem.className = "left-side";
+
+    const description = document.createElement("p");
+    description.setAttribute("id", "item-description");
+
+    const rightItem = document.createElement("div");
+    rightItem.className = "right-side";
+
+    const userList = document.createElement("ul");
+    userList.setAttribute("id", "user-list");
+
+    const list = document.createElement("li");
+    list.setAttribute("id", "user");
+
+    eventTitle.innerHTML = data[i].name;
+    itemDate.innerHTML = "Next start :" + " " + data[i].dates[i].date;
+    description.innerHTML = data[i].description;
+    const notValid = document.createElement("i");
+    notValid.className = "fa-solid fa-xmark";
+    const valid = document.createElement("i");
+    valid.className = "fa-solid fa-check";
+
+    if (data[i].dates[i].attendees[i].available == true) {
+      list.innerHTML = data[i].dates[i].attendees[i].name;
+    } else if (data[i].dates[i].available == "") {
+      list.innerHTML = data[i].dates[i].attendees[i].name;
+    }
+
+    caseC.appendChild(item);
+    item.appendChild(topItem);
+    item.appendChild(mainItem);
+
+    topItem.appendChild(eventTitle);
+    topItem.appendChild(itemDate);
+
+    mainItem.appendChild(leftItem);
+    mainItem.appendChild(rightItem);
+
+    leftItem.appendChild(description);
+    rightItem.appendChild(userList);
+    userList.appendChild(list);
+    list.appendChild(valid);
   }
 }

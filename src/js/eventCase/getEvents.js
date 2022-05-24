@@ -6,4 +6,3 @@ export default async function getEvents() {
   console.log(data);
   displayEvent(data);
 }
-getEvents();
