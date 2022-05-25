@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <title>Didlydoo</title>
   </head>
   <body>
@@ -48,7 +52,24 @@
               ></textarea>
             </form>
           </div>
-          <div class="modal-right"></div>
+          <div class="modal-right">
+            <div class="form-right">
+              <input
+                type="text"
+                name="date"
+                class="date-picker"
+                placeholder="Pick up a date"
+              />
+              <input
+                type="text"
+                name="name"
+                id="input-add"
+                placeholder="Add people"
+                autocomplete="off"
+              />
+              <button type="submit" id="submit-btn">Save</button>
+            </div>
+          </div>
         </div>
       </div>
       <!--  POPUP_MODAL -->
@@ -77,6 +98,16 @@
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr(".date-picker", {
+        mode: "multiple",
+        altInput: true,
+        altFormat: "j F, Y",
+
+        dateFormat: "d-m-Y",
+      });
+    </script>
     <script
       src="https://kit.fontawesome.com/97bceb2613.js"
       crossorigin="anonymous"

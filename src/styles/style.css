@@ -6,8 +6,6 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Poppins";
   overflow-x: hidden;
 }
@@ -125,9 +123,38 @@ select {
 }
 
 .modal-right {
+  background: rgb(154, 150, 150);
   width: 50%;
   height: 100%;
-  background: #ccc;
+  padding: 30px;
+}
+
+.form-right {
+  height: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.date-picker {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 3em;
+}
+
+#input-add {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 3em;
+}
+
+#submit-btn {
+  padding: 8px;
+  border-radius: 7px;
+  border: none;
+  height: 3em;
 }
 
 /* PAGE  */
