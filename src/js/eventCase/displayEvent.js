@@ -37,7 +37,7 @@ export default function displayEvent(data) {
     list.setAttribute("id", "user");
 
     eventTitle.innerHTML = data[i].name;
-    itemDate.innerHTML = "Start :" + " " + data[i].dates[i].date;
+    itemDate.innerHTML = "Start :" + " " + data[i].dates[0].date;
     description.innerHTML = data[i].description;
 
     // if (data[i].dates[i].attendees[i].available == true) {
