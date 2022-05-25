@@ -1,3 +1,8 @@
-const title = document.createElement("h3");
-const listUl = document.createElement("ul");
-const listList = document.createElement("li");
+async function addEvents() {
+  const req = await fetch(
+    "http://localhost:3000/api/events/"({
+      method: "POST",
+      body: [{ name: "", dates: [""], author: "", description: "" }],
+    })
+  );
+}

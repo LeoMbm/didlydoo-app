@@ -1,4 +1,8 @@
 const caseC = document.querySelector(".item-container");
+const notValid = document.createElement("i");
+notValid.className = "fa-solid fa-xmark";
+const valid = document.createElement("i");
+valid.className = "fa-solid fa-check";
 
 export default function displayEvent(data) {
   for (let i = 0; i < data.length; i++) {
@@ -33,18 +37,18 @@ export default function displayEvent(data) {
     list.setAttribute("id", "user");
 
     eventTitle.innerHTML = data[i].name;
-    itemDate.innerHTML = "Next start :" + " " + data[i].dates[i].date;
+    itemDate.innerHTML = "Start :" + " " + data[i].dates[i].date;
     description.innerHTML = data[i].description;
-    const notValid = document.createElement("i");
-    notValid.className = "fa-solid fa-xmark";
-    const valid = document.createElement("i");
-    valid.className = "fa-solid fa-check";
 
-    if (data[i].dates[i].attendees[i].available == true) {
-      list.innerHTML = data[i].dates[i].attendees[i].name;
-    } else if (data[i].dates[i].available == "") {
-      list.innerHTML = data[i].dates[i].attendees[i].name;
-    }
+    // if (data[i].dates[i].attendees[i].available == true) {
+    //   list.innerHTML =
+    //     data[i].dates[i].attendees[i].name +
+    //     '<i class="fa-solid fa-check"></i>';
+    // } else {
+    //   list.innerHTML =
+    //     data[i].dates[i].attendees[i].name +
+    //     '<i class="fa-solid fa-xmark"></i>';
+    // }
 
     caseC.appendChild(item);
     item.appendChild(topItem);
@@ -59,6 +63,6 @@ export default function displayEvent(data) {
     leftItem.appendChild(description);
     rightItem.appendChild(userList);
     userList.appendChild(list);
-    list.appendChild(valid);
+    // list.appendChild(valid);
   }
 }
